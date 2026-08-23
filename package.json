@@ -1,0 +1,20 @@
+{
+  "name": "opportunity-radar",
+  "version": "0.2.0",
+  "private": true,
+  "description": "OSS Opportunity Radar — 从 GitHub 数据自动发现开源商业化机会（评分引擎 + CLI）",
+  "type": "module",
+  "bin": {
+    "opportunity-radar": "./bin/opportunity-radar.mjs"
+  },
+  "scripts": {
+    "start": "node bin/opportunity-radar.mjs ai 10",
+    "demo": "node bin/opportunity-radar.mjs ai 10 --demo",
+    "radar": "node bin/opportunity-radar.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["github", "oss", "opportunity", "scoring", "radar"]
+}

@@ -1,0 +1,63 @@
+# 发布到 GitHub Pages：构建数据快照 + 部署静态 Web App
+# 触发：push 到 main、每日定时、手动
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: '0 5 * * *'      # 每天 05:00 UTC 重新拉取数据并发布
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Run tests (gate)
+        run: npm test
+
+      - name: Build data snapshot from live GitHub data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/build-snapshot.mjs --topics ai,self-hosted,database,devops,llm --limit 25
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

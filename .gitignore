@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+
+# CI 数据快照目录（仓库根级，由定时任务生成）
+/data/
+
+# 本地开发产物
+*.log

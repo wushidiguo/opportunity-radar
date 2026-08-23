@@ -1,0 +1,72 @@
+# OSS Opportunity Radar — CI
+# - PR/push: 运行单元 + 集成测试（demo 模式离线）
+# - 每日定时: 拉取实时数据生成机会快照（需 GH_TOKEN，GITHUB_TOKEN 自带）
+name: Opportunity Radar CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'   # 每天 03:00 UTC 定时更新数据快照
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: opportunity-radar
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: opportunity-radar/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit + integration tests
+        run: npm test
+
+      - name: Demo smoke run (offline fixture)
+        run: npm run demo
+
+  data-snapshot:
+    name: Daily data snapshot
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: opportunity-radar
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Fetch opportunity snapshots (live GitHub data)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data
+          node bin/opportunity-radar.mjs ai 20 --format json --out data/opportunities-ai.json
+          node bin/opportunity-radar.mjs self-hosted 20 --format json --out data/opportunities-self-hosted.json
+          node bin/opportunity-radar.mjs database 20 --format json --out data/opportunities-database.json
+
+      - name: Upload snapshot artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: opportunity-snapshots
+          path: opportunity-radar/data/*.json
+          retention-days: 30

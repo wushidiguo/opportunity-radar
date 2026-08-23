@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSS Opportunity Radar — 开源商业化机会雷达</title>
+  <meta name="description" content="从 GitHub 数据自动发现“用户需求很强但还没人做好商业化”的开源机会。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>📡 OSS Opportunity Radar</h1>
+      <p class="tagline">开源商业化机会雷达 —— 从 GitHub 数据发现“有人需要、还没人做好商业化”的开源方向</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <nav id="topics" class="topics" aria-label="Topics"></nav>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="搜索仓库名 / 描述…" autocomplete="off" />
+        <select id="sort" aria-label="排序"><option value="score">按机会分</option><option value="stars">按 Stars</option><option value="issues">按 Issues</option><option value="name">按名称</option></select>
+        <label class="slider-label">最低分 <output id="minScoreOut">0</output><input id="minScore" type="range" min="0" max="100" step="5" value="0" /></label>
+        <button id="savedToggle" class="btn" type="button">⭐ 已保存 (<span id="savedCount">0</span>)</button>
+      </div>
+    </section>
+
+    <p id="status" class="status" role="status"></p>
+    <section id="cards" class="cards" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Opportunity Score 公式：热度(30) + 需求(20) + 活跃度(15) + 未归档(10) + issueTracker(10) + license(5) + description(5) + issueRatio(5)</p>
+      <p id="meta"></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
