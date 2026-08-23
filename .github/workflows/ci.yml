@@ -15,9 +15,6 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: opportunity-radar
     steps:
       - uses: actions/checkout@v4
 
@@ -25,7 +22,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: opportunity-radar/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -40,9 +37,6 @@ jobs:
     name: Daily data snapshot
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: opportunity-radar
     steps:
       - uses: actions/checkout@v4
 
@@ -68,5 +62,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: opportunity-snapshots
-          path: opportunity-radar/data/*.json
+          path: data/*.json
           retention-days: 30
