@@ -41,8 +41,8 @@ export function isListRepo(repo = {}) {
 export function isContentRepo(repo = {}) {
   const name = (repo.fullName || '').split('/').pop().toLowerCase();
   const desc = (repo.description || '').toLowerCase();
-  const nameHit = /(awesome|beginners?|lessons?|tutorial|guide|books?|resources?|cheat|roadmap|notes|course|curated|examples?|answers?|questions?|leetcode|interview|20\d\d-|-in-\d|-beginners)/.test(name);
-  const descHit = /(guide|tutorial|lessons?|curated|collection|list of|learn (about|how)|introduc|course|cheat|resources|course|教程|指南|学习|课程|笔记|入门|书籍|合集|清单|习题|答案)/.test(desc);
+  const nameHit = /(awesome|beginners?|lessons?|tutorial|guide|books?|resources?|cheat|roadmap|notes|course|curated|examples?|answers?|questions?|leetcode|interview|20\d\d-|-in-\d|-beginners|system-?prompt|prompt-?leak|models-of-ai-tools|ai-?tools)/.test(name);
+  const descHit = /(guide|tutorial|lessons?|curated|collection|list of|learn (about|how)|introduc|course|cheat|resources|教程|指南|学习|课程|笔记|入门|书籍|合集|清单|习题|答案|extracted system prompts|leaked system prompts)/.test(desc);
   return nameHit || descHit;
 }
 

@@ -84,6 +84,16 @@ function cardHtml(card) {
     html += '<p class="desc">' + escapeHtml(r.description) + "</p>";
   }
   html += '<div class="factors">' + chips + "</div>";
+  if (card.insight && card.insight.reason) {
+    html += '<div class="insight">';
+    html += '<div class="insight-title">💡 洞见</div>';
+    html += '<p class="insight-reason">' + escapeHtml(card.insight.reason) + '</p>';
+    var dBuckets = (card.insight.demand && card.insight.demand.buckets) || [];
+    if (dBuckets.length) {
+      html += '<div class="factors">' + dBuckets.filter(function (b) { return b.count > 0; }).map(function (b) { return '<span class="chip hit">' + escapeHtml(b.label) + ' <b>' + b.count + '</b></span>'; }).join('') + "</div>";
+    }
+    html += '</div>';
+  }
   html += '<div class="card-actions">';
   html += '<button class="save-btn' + (isSaved ? " saved" : "") + '" data-name="' + escapeHtml(r.fullName) + '">' + (isSaved ? "★ 已保存" : "☆ 保存") + "</button>";
   html += '<span class="card-grade">机会分 ' + card.score + "/100</span>";
