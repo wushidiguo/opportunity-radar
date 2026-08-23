@@ -65,6 +65,12 @@ test('渲染管线生成机会卡片', async () => {
 
   const topCard = snapshot.topics[Object.keys(snapshot.topics)[0]][0];
   assert.ok(cardsHTML.includes(topCard.repo.fullName), '缺少最高分仓库: ' + topCard.repo.fullName);
+
+  // 若最高分卡片有洞察，则应渲染"洞见"框（这是产品的核心价值）
+  if (topCard.insight) {
+    assert.match(cardsHTML, /💡 洞见/, '应有洞见框');
+    assert.match(cardsHTML, /insight-reason/, '应有洞见理由');
+  }
 });
 
 test('渲染结果包含机会分', async () => {
