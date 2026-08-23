@@ -68,10 +68,10 @@ test('buildReason: 生成含诉求与商业化的中文叙述', () => {
     commercialization: { isMonetized: false, hasSelfHost: true, hasPricing: false, hasCloud: false },
   };
   const reason = buildReason(insight);
-  assert.ok(reason.includes('托管/云 3 条'));
-  assert.ok(reason.includes('功能 9 条'));
-  assert.match(reason, /强烈建议做托管版|商业化空白/);
-  assert.match(reason, /无人回复/);
+  assert.ok(reason.includes('hosted/cloud 3'));
+  assert.ok(reason.includes('features 9'));
+  assert.match(reason, /strong case for a hosted|real gap/);
+  assert.match(reason, /unanswered issues/);
 });
 
 test('buildReason: 已商业化时说明', () => {
@@ -80,5 +80,5 @@ test('buildReason: 已商业化时说明', () => {
     commercialization: { isMonetized: true, hasPricing: true, hasCloud: true },
   };
   const reason = buildReason(insight);
-  assert.match(reason, /定价/);
+  assert.match(reason, /pricing/);
 });

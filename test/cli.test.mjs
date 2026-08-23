@@ -17,7 +17,7 @@ test('demo 表格输出包含标题、仓库和因子说明', () => {
   assert.equal(r.status, 0, r.stderr);
   assert.match(r.stdout, /OSS Opportunity Radar/);
   assert.match(r.stdout, /\w+\/\w+/); // owner/repo 出现在表格
-  assert.match(r.stdout, /因子:/);
+  assert.match(r.stdout, /Factors:/);
 });
 
 test('demo JSON 输出可解析且按分数降序', () => {
@@ -68,11 +68,11 @@ test('未知 topic 在 demo 模式下报错且非零退出', () => {
 test('--help 正常退出', () => {
   const r = run(['--help']);
   assert.equal(r.status, 0);
-  assert.match(r.stdout, /用法/);
+  assert.match(r.stdout, /Usage/);
 });
 
 test('缺 topic 参数报错', () => {
   const r = run([]);
   assert.notEqual(r.status, 0);
-  assert.match(r.stderr, /缺少 topic/);
+  assert.match(r.stderr, /missing/);
 });

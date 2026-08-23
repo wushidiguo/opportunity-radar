@@ -4,12 +4,12 @@ import { spawnSync } from 'node:child_process';
 
 // 需求信号分类：关键词命中 issue 标题/正文前段
 const DEMAND_BUCKETS = [
-  { key: 'hosted',  label: '托管/云版',   re: /(hosted|hosting|official\s+cloud|cloud\s+version|saas|managed|multi-tenant|multi-user|team\s+plan|collaborat)/i },
-  { key: 'paid',    label: '付费/商业',   re: /(willing\s+to\s+pay|would\s+pay|happy\s+to\s+pay|pay\s+for|bu(y|ying)|subscription|pricing|paid\s+plan|donate|sponsor|commercial\s+license|sell)/i },
-  { key: 'mobile',  label: '移动端',      re: /(mobile|ios|android|phone\s+app|windows\s+phone|tablet)/i },
-  { key: 'api',     label: 'API/集成',    re: /(rest\s+api|webhook|sdk|integration|plugin|cli\s+tool|api\s+for)/i },
-  { key: 'feature', label: '功能诉求',    re: /(feature\s+request|would\s+be\s+great|please\s+add|please\s+support|support\s+for|missing|add\s+support|ability\s+to|i\s+wish|it\s+would\s+be\s+nice|would\s+love)/i },
-  { key: 'selfhost', label: '自托管',      re: /(self-?host|selfhost|docker\s+compose|self\s+hosting)/i },
+  { key: 'hosted',  label: 'hosted/cloud',   re: /(hosted|hosting|official\s+cloud|cloud\s+version|saas|managed|multi-tenant|multi-user|team\s+plan|collaborat)/i },
+  { key: 'paid',    label: 'paid/commercial',   re: /(willing\s+to\s+pay|would\s+pay|happy\s+to\s+pay|pay\s+for|bu(y|ying)|subscription|pricing|paid\s+plan|donate|sponsor|commercial\s+license|sell)/i },
+  { key: 'mobile',  label: 'mobile',      re: /(mobile|ios|android|phone\s+app|windows\s+phone|tablet)/i },
+  { key: 'api',     label: 'API/integration',    re: /(rest\s+api|webhook|sdk|integration|plugin|cli\s+tool|api\s+for)/i },
+  { key: 'feature', label: 'features',    re: /(feature\s+request|would\s+be\s+great|please\s+add|please\s+support|support\s+for|missing|add\s+support|ability\s+to|i\s+wish|it\s+would\s+be\s+nice|would\s+love)/i },
+  { key: 'selfhost', label: 'self-host',      re: /(self-?host|selfhost|docker\s+compose|self\s+hosting)/i },
 ];
 
 function hitsAny(text, re) { return re.test(text); }
@@ -71,25 +71,25 @@ export function refineScore(baseScore, insight) {
 export function buildReason(insight) {
   if (!insight) return '';
   const c = (insight.demand && insight.demand.counts) || {};
-  const bucketSummary = (k, label) => (c[k] ? label + ' ' + c[k] + ' 条' : '');
-  const parts = [bucketSummary('hosted', '托管/云'), bucketSummary('paid', '付费'), bucketSummary('mobile', '移动端'), bucketSummary('api', 'API/集成'), bucketSummary('feature', '功能'), bucketSummary('selfhost', '自托管')].filter(Boolean);
-  const dem = parts.length ? 'open issue 中强烈诉求：' + parts.join('、') : '未发现明显付费/功能诉求';
+  const bucketSummary = (k, label) => (c[k] ? label + ' ' + c[k] : '');
+  const parts = [bucketSummary('hosted', 'hosted/cloud'), bucketSummary('paid', 'paid'), bucketSummary('mobile', 'mobile'), bucketSummary('api', 'API/integration'), bucketSummary('feature', 'features'), bucketSummary('selfhost', 'self-host')].filter(Boolean);
+  const dem = parts.length ? 'strong demand in open issues: ' + parts.join(', ') : 'no clear paid/feature demand found';
   const total = insight.demand ? insight.demand.total : 0;
   const comm = insight.commercialization || {};
   let last;
-  if (comm.isMonetized) last = ' README 已出现定价/付费（商业化候选，需验证是否已有人在做）。';
-  else if (comm.hasCloud) last = ' README 提到云/托管，但无定价——可能正在商业化进程中。';
-  else if (comm.hasSelfHost) last = ' 以自托管为主，README 未见定价/托管版 → 强烈建议做托管版/付费版。';
-  else last = ' README 未见商业化线索 → 存在商业化空白。';
-  if ((insight.demand && insight.demand.unanswered) >= 20) last += '（另有 ' + insight.demand.unanswered + ' 条 issue 无人回复，需求被忽视）';
-  return '共 ' + total + ' 个信号，' + dem + '；' + last;
+  if (comm.isMonetized) last = ' README already shows pricing/payment — it may already be commercialized.';
+  else if (comm.hasCloud) last = ' README mentions cloud/hosted but no pricing — possibly commercializing now.';
+  else if (comm.hasSelfHost) last = ' mostly self-hosted with no pricing/hosted tier — a strong case for a hosted or paid product.';
+  else last = ' no commercialization evidence found — a real gap.';
+  if ((insight.demand && insight.demand.unanswered) >= 20) last += ' (' + insight.demand.unanswered + ' unanswered issues — demand being ignored)';
+  return 'Total ' + total + ' demand signals; ' + dem + ';' + last;
 }
 
 /* ---- 网络封装（通过 gh CLI） ---- */
 
 function ghJson(args) {
   const res = spawnSync('gh', args, { encoding: 'utf8', env: { ...process.env, GH_NO_UPDATE_NOTIFIER: '1' } });
-  if (res.status !== 0) throw new Error('gh 请求失败: ' + ((res.stderr || '').trim() || args.join(' ')));
+  if (res.status !== 0) throw new Error('gh request failed: ' + ((res.stderr || '').trim() || args.join(' ')));
   return JSON.parse(res.stdout);
 }
 

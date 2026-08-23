@@ -14,26 +14,26 @@ function daysSince(iso, now) {
 
 export function renderTable(cards, now = Date.now()) {
   const lines = [];
-  lines.push('OSS Opportunity Radar — 开源商业化机会雷达（v2 · 重视商业化空白）');
+  lines.push('OSS Opportunity Radar — Open-Source Commercialization Opportunities');
   lines.push('');
   lines.push(
     pad('Rank', 5) + pad('Score', 8) + pad('Grade', 8) + pad('Gap', 6) +
-    pad('Repo', 40) + pad('Stars', 9) + pad('Issues', 8) + pad('商业化', 8)
+    pad('Repo', 40) + pad('Stars', 9) + pad('Issues', 8) + pad('Comm.', 7)
   );
   lines.push('-'.repeat(94));
   cards.forEach((card, i) => {
     const r = card.repo;
-    const commercialized = card.commercialized ? '⚠️已' : '空白';
+    const commercialized = card.commercialized ? 'Yes' : 'Gap';
     lines.push(
       pad(i + 1, 5) + pad(card.score + '/100', 8) + pad(card.grade.code + ' ' + card.grade.label, 8) +
       pad(card.gap, 6) + pad(r.fullName, 40) + pad(r.stars, 9) + pad(r.openIssues, 8) + pad(commercialized, 8)
     );
     if (r.description) lines.push('  ' + String(r.description).slice(0, 88));
     const parts = card.factors.filter((f) => f.points !== 0).map((f) => f.key + '=' + f.points + (f.detail ? '(' + f.detail + ')' : ''));
-    if (parts.length) lines.push('  因子: ' + parts.join('  '));
+    if (parts.length) lines.push('  Factors: ' + parts.join('  '));
     lines.push('');
   });
-  lines.push('Score 公式: 热度(20) + 需求(15) + 活跃度(10) + 健康(15) + 商业化空白(40，可负扣分)  |  ⚠️已 = 已有官网/托管/云产品');
+  lines.push('Score = Popularity(20) + Demand(15) + Activity(10) + Health(15) + Gap(40, may be negative)  |  Comm. Yes = has a product site / cloud / hosted product');
   return lines.join('\n');
 }
 

@@ -48,7 +48,7 @@ function saveCard(fullName, btn) {
   if (state.saved.has(fullName)) state.saved.delete(fullName);
   else state.saved.add(fullName);
   localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(state.saved)));
-  btn.textContent = state.saved.has(fullName) ? "★ 已保存" : "☆ 保存";
+  btn.textContent = state.saved.has(fullName) ? "★ Saved" : "☆ Save";
   btn.classList.toggle("saved", state.saved.has(fullName));
   $("savedCount").textContent = state.saved.size;
   if (state.savedOnly) render();
@@ -65,9 +65,9 @@ function cardHtml(card) {
   }).join("");
   var commPill = card.commercialized
     ? '<span class="pill comm">⚠️ 已有商业化（官网/云/托管）</span>'
-    : '<span class="pill gap">✅ 商业化空白</span>';
+    : '<span class="pill gap">✅ Commercialization gap</span>';
   var html = '<article class="card">';
-  html += '<div class="pill-row">' + commPill + '<span class="pill gapval">商业化空白 ' + card.gap + '/40</span></div>';
+  html += '<div class="pill-row">' + commPill + '<span class="pill gapval">Gap ' + card.gap + '/40</span></div>';
   html += '<div class="card-top">';
   html += '<div class="ring" style="--pct:' + card.score + ';--ring-color:' + ringColor(card.score) + '"><div class="ring-inner">' + card.score + "</div></div>";
   html += '<div class="card-title">';
@@ -86,7 +86,7 @@ function cardHtml(card) {
   html += '<div class="factors">' + chips + "</div>";
   if (card.insight && card.insight.reason) {
     html += '<div class="insight">';
-    html += '<div class="insight-title">💡 洞见</div>';
+    html += '<div class="insight-title">💡 Insight</div>';
     html += '<p class="insight-reason">' + escapeHtml(card.insight.reason) + '</p>';
     var dBuckets = (card.insight.demand && card.insight.demand.buckets) || [];
     if (dBuckets.length) {
@@ -95,8 +95,8 @@ function cardHtml(card) {
     html += '</div>';
   }
   html += '<div class="card-actions">';
-  html += '<button class="save-btn' + (isSaved ? " saved" : "") + '" data-name="' + escapeHtml(r.fullName) + '">' + (isSaved ? "★ 已保存" : "☆ 保存") + "</button>";
-  html += '<span class="card-grade">机会分 ' + card.score + "/100</span>";
+  html += '<button class="save-btn' + (isSaved ? " saved" : "") + '" data-name="' + escapeHtml(r.fullName) + '">' + (isSaved ? "★ Saved" : "☆ Save") + "</button>";
+  html += '<span class="card-grade">Score ' + card.score + "/100</span>";
   html += "</div></article>";
   return html;
 }
@@ -131,13 +131,13 @@ function render() {
   var list = sorted(visibleCards());
   var el = $("cards");
   if (list.length === 0) {
-    el.innerHTML = '<div class="empty">没有符合条件的机会 — 试试调整筛选或切换 topic</div>';
+    el.innerHTML = '<div class="empty">No matching opportunities — try adjusting the filters or switching topic</div>';
   } else {
     var out = "";
     for (var i = 0; i < list.length; i++) out += cardHtml(list[i]);
     el.innerHTML = out;
   }
-  $("status").textContent = list.length + " 个机会 · topic: " + state.topic;
+  $("status").textContent = list.length + " opportunities · topic: " + state.topic;
   var btns = el.querySelectorAll(".save-btn");
   for (var j = 0; j < btns.length; j++) {
     (function (btn) {
@@ -190,12 +190,12 @@ function init() {
     state.topic = topics[0];
     var total = 0;
     for (var i = 0; i < topics.length; i++) total += data.topics[topics[i]].length;
-    $("meta").textContent = "数据快照: " + new Date(data.generatedAt).toLocaleString() + " · " + topics.length + " 个 topic · 共 " + total + " 个仓库";
+    $("meta").textContent = "Snapshot: " + new Date(data.generatedAt).toLocaleString() + " · " + topics.length + " topics · " + total + " repos";
     renderTopics();
     render();
   }).catch(function (err) {
-    $("status").textContent = "加载数据失败: " + err.message + "（请稍后刷新，或检查数据快照是否已生成）";
-    $("cards").innerHTML = '<div class="empty">⚠️ 数据加载失败</div>';
+    $("status").textContent = "Failed to load data: " + err.message + " (refresh later, or verify the snapshot was built)";
+    $("cards").innerHTML = '<div class="empty">⚠️ Failed to load data</div>';
   });
 }
 

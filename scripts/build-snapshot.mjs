@@ -24,7 +24,7 @@ function parseArgs(argv) {
     else if (a === '--out') opts.out = argv[++i];
     else throw new Error('unknown option: ' + a);
   }
-  if (opts.topics.length === 0) throw new Error('--topics 不能为空');
+  if (opts.topics.length === 0) throw new Error('--topics cannot be empty');
   return opts;
 }
 

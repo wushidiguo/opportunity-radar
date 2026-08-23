@@ -14,11 +14,11 @@ const GITHUB_HOST_RE = /(^|\.)github\.(com|io)$/i;
 const DIY_TOPIC_RE = /self-hosted|selfhosted|self-hosting|cli|dashboard|home|library|tool|privacy|owncast|diy|self-host/i;
 
 export const FACTOR_DEFS = [
-  { key: 'popularity', label: '热度 (log10 stars)',     max: 20 },
-  { key: 'demand',     label: '需求 (open issues)',      max: 15 },
-  { key: 'activity',   label: '活跃度 (近期 push)',       max: 10 },
-  { key: 'health',     label: '项目健康 (未归档+issue+desc)', max: 15 },
-  { key: 'gap',        label: '商业化空白 (Gap)',        max: 40 },
+  { key: 'popularity', label: 'Popularity (log10 stars)',  max: 20 },
+  { key: 'demand',     label: 'Demand (open issues)',      max: 15 },
+  { key: 'activity',   label: 'Activity (recent push)',   max: 10 },
+  { key: 'health',     label: 'Health (archived+issues+desc+wiki)', max: 15 },
+  { key: 'gap',        label: 'Commercialization gap',    max: 40 },
 ];
 
 function clamp(value, min, max) {
@@ -78,10 +78,10 @@ export function gapFactor(repo = {}, ctx = {}) {
 }
 
 export function gradeFor(score) {
-  if (score >= 75) return { code: 'A', label: '强机会' };
-  if (score >= 60) return { code: 'B', label: '中机会' };
-  if (score >= 45) return { code: 'C', label: '弱机会' };
-  return { code: 'D', label: '低信号' };
+  if (score >= 75) return { code: 'A', label: 'Strong' };
+  if (score >= 60) return { code: 'B', label: 'Moderate' };
+  if (score >= 45) return { code: 'C', label: 'Weak' };
+  return { code: 'D', label: 'Low signal' };
 }
 
 export function computeScore(repo = {}, opts = {}) {
@@ -123,7 +123,7 @@ export function computeScore(repo = {}, opts = {}) {
   const gap = gapFactor(repo, ctx);
   const { commercialized } = detectCommercialSignals(repo, ctx);
   const gapDef = FACTOR_DEFS.find((f) => f.key === 'gap');
-  factors.push({ key: 'gap', label: gapDef.label, points: gap, max: gapDef.max, detail: commercialized ? '已商业化' : '空白' });
+  factors.push({ key: 'gap', label: gapDef.label, points: gap, max: gapDef.max, detail: commercialized ? 'commercialized' : 'gap' });
   total += gap;
 
   const rounded = Math.round(clamp(total, 0, SCORE_MAX));

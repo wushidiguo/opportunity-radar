@@ -60,15 +60,15 @@ test('渲染管线生成机会卡片', async () => {
   assert.match(cardsHTML, /class="ring-inner"/, '应有评分环');
   assert.match(cardsHTML, /class="badge [ABCD]"/, '应有等级徽章');
   assert.match(cardsHTML, /github\.com\//, '应有仓库链接');
-  assert.match(elements.status.textContent, /个机会/, '应有状态文案');
-  assert.match(elements.meta.textContent, /数据快照/, '应有元信息');
+  assert.match(elements.status.textContent, /opportunities/, 'status text');
+  assert.match(elements.meta.textContent, /Snapshot/, 'meta text');
 
   const topCard = snapshot.topics[Object.keys(snapshot.topics)[0]][0];
   assert.ok(cardsHTML.includes(topCard.repo.fullName), '缺少最高分仓库: ' + topCard.repo.fullName);
 
   // 若最高分卡片有洞察，则应渲染"洞见"框（这是产品的核心价值）
   if (topCard.insight) {
-    assert.match(cardsHTML, /💡 洞见/, '应有洞见框');
+    assert.match(cardsHTML, /💡 Insight/, 'insight box');
     assert.match(cardsHTML, /insight-reason/, '应有洞见理由');
   }
 });
@@ -77,5 +77,5 @@ test('渲染结果包含机会分', async () => {
   const snapshot = JSON.parse(readFileSync(path.join(ROOT, 'web', 'data', 'opportunities.json'), 'utf8'));
   const elements = runApp(snapshot);
   await new Promise((r) => setTimeout(r, 50));
-  assert.match(elements.cards.innerHTML, /机会分 \d+\/100/, '缺少机会分显示');
+  assert.match(elements.cards.innerHTML, /Score \d+\/100/, 'score display');
 });
