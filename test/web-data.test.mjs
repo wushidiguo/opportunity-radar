@@ -26,6 +26,9 @@ test('数据快照存在且结构完整', () => {
       assert.ok(card.grade && card.grade.code, topic + ' 缺 grade');
       assert.ok(card.repo && card.repo.fullName, topic + ' 缺 repo');
       assert.ok(Array.isArray(card.factors) && card.factors.length > 0, topic + ' 缺 factors');
+      assert.ok(typeof card.gap === 'number' && card.gap >= -20 && card.gap <= 40, topic + ' gap 越界: ' + card.gap);
+      assert.ok(typeof card.commercialized === 'boolean', topic + ' 缺 commercialized');
+      assert.ok(Array.isArray(card.signals), topic + ' 缺 signals');
       assert.ok(card.repo.htmlUrl && card.repo.htmlUrl.startsWith('https://'), topic + ' htmlUrl 异常');
     }
   }
@@ -59,7 +62,7 @@ test('build-snapshot --demo 可离线生成快照', () => {
   const out = path.join(ROOT, 'web', 'data', 'demo-check.json');
   const res = spawnSync(process.execPath, [
     path.join(ROOT, 'scripts', 'build-snapshot.mjs'),
-    '--demo', '--topics', 'ai,database', '--limit', '5', '--out', out,
+    '--demo', '--topics', 'ai,database', '--top', '5', '--out', out,
   ], { encoding: 'utf8' });
   assert.equal(res.status, 0, res.stderr);
   const data = JSON.parse(readFileSync(out, 'utf8'));

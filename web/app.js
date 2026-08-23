@@ -63,7 +63,11 @@ function cardHtml(card) {
     var tip = f.detail ? ' <i title="' + escapeHtml(f.detail) + '">*</i>' : "";
     return '<span class="chip' + cls + '">' + escapeHtml(f.label) + " <b>" + f.points + "</b>" + tip + "</span>";
   }).join("");
+  var commPill = card.commercialized
+    ? '<span class="pill comm">⚠️ 已有商业化（官网/云/托管）</span>'
+    : '<span class="pill gap">✅ 商业化空白</span>';
   var html = '<article class="card">';
+  html += '<div class="pill-row">' + commPill + '<span class="pill gapval">商业化空白 ' + card.gap + '/40</span></div>';
   html += '<div class="card-top">';
   html += '<div class="ring" style="--pct:' + card.score + ';--ring-color:' + ringColor(card.score) + '"><div class="ring-inner">' + card.score + "</div></div>";
   html += '<div class="card-title">';

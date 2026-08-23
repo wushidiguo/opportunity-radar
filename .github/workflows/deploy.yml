@@ -48,7 +48,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node scripts/build-snapshot.mjs --topics ai,self-hosted,database,devops,llm --limit 25
+          node scripts/build-snapshot.mjs --topics ai,self-hosted,database,devops,llm --pool 120 --top 40
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

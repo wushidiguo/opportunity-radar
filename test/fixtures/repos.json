@@ -2,547 +2,1141 @@
   "ai": [
     {
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "forksCount": 81313,
       "fullName": "openclaw/openclaw",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://openclaw.ai",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
-      "openIssuesCount": 6099,
-      "pushedAt": "2026-08-23T02:17:58Z",
-      "stargazersCount": 387158,
+      "openIssuesCount": 6097,
+      "owner": {
+        "id": "O_kgDODxG9fw",
+        "is_bot": false,
+        "login": "openclaw",
+        "type": "Organization",
+        "url": "https://github.com/openclaw"
+      },
+      "pushedAt": "2026-08-23T02:47:25Z",
+      "stargazersCount": 387162,
       "url": "https://github.com/openclaw/openclaw"
     },
     {
       "description": "An agentic skills framework & software development methodology that works.",
+      "forksCount": 24706,
       "fullName": "obra/superpowers",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "",
       "isArchived": false,
+      "isFork": false,
+      "language": "Shell",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 308,
+      "owner": {
+        "id": "MDQ6VXNlcjQ1NDE2",
+        "is_bot": false,
+        "login": "obra",
+        "type": "User",
+        "url": "https://github.com/obra"
+      },
       "pushedAt": "2026-08-19T17:33:23Z",
-      "stargazersCount": 276212,
+      "stargazersCount": 276222,
       "url": "https://github.com/obra/superpowers"
     },
     {
       "description": "The agent that grows with you",
+      "forksCount": 47172,
       "fullName": "NousResearch/hermes-agent",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://hermes-agent.nousresearch.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
-      "openIssuesCount": 34826,
-      "pushedAt": "2026-08-23T02:18:02Z",
-      "stargazersCount": 234417,
+      "openIssuesCount": 34836,
+      "owner": {
+        "id": "O_kgDOB_9BPQ",
+        "is_bot": false,
+        "login": "NousResearch",
+        "type": "Organization",
+        "url": "https://github.com/NousResearch"
+      },
+      "pushedAt": "2026-08-23T02:30:13Z",
+      "stargazersCount": 234421,
       "url": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "forksCount": 60306,
       "fullName": "n8n-io/n8n",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://n8n.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 1069,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjQ1NDg3NzEx",
+        "is_bot": false,
+        "login": "n8n-io",
+        "type": "Organization",
+        "url": "https://github.com/n8n-io"
+      },
       "pushedAt": "2026-08-22T21:44:14Z",
-      "stargazersCount": 201842,
+      "stargazersCount": 201853,
       "url": "https://github.com/n8n-io/n8n"
     },
     {
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "forksCount": 46048,
       "fullName": "Significant-Gravitas/AutoGPT",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://agpt.co",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
-      "openIssuesCount": 532,
-      "pushedAt": "2026-08-23T02:15:17Z",
+      "openIssuesCount": 531,
+      "owner": {
+        "id": "O_kgDOB8roIQ",
+        "is_bot": false,
+        "login": "Significant-Gravitas",
+        "type": "Organization",
+        "url": "https://github.com/Significant-Gravitas"
+      },
+      "pushedAt": "2026-08-23T02:32:56Z",
       "stargazersCount": 186779,
       "url": "https://github.com/Significant-Gravitas/AutoGPT"
     },
     {
       "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+      "forksCount": 9496,
       "fullName": "firecrawl/firecrawl",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://firecrawl.dev",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "agpl-3.0",
         "name": "GNU Affero General Public License v3.0",
         "url": "https://api.github.com/licenses/agpl-3.0"
       },
       "openIssuesCount": 549,
+      "owner": {
+        "id": "O_kgDOCAzO1A",
+        "is_bot": false,
+        "login": "firecrawl",
+        "type": "Organization",
+        "url": "https://github.com/firecrawl"
+      },
       "pushedAt": "2026-08-22T17:29:38Z",
-      "stargazersCount": 170995,
+      "stargazersCount": 170998,
       "url": "https://github.com/firecrawl/firecrawl"
     },
     {
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "forksCount": 21654,
       "fullName": "f/prompts.chat",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://prompts.chat",
       "isArchived": false,
+      "isFork": false,
+      "language": "HTML",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 68,
+      "owner": {
+        "id": "MDQ6VXNlcjE5NjQ3Nw==",
+        "is_bot": false,
+        "login": "f",
+        "type": "User",
+        "url": "https://github.com/f"
+      },
       "pushedAt": "2026-08-22T03:19:18Z",
-      "stargazersCount": 167768,
+      "stargazersCount": 167769,
       "url": "https://github.com/f/prompts.chat"
     },
     {
       "description": "Stable Diffusion web UI",
+      "forksCount": 30548,
       "fullName": "AUTOMATIC1111/stable-diffusion-webui",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "agpl-3.0",
         "name": "GNU Affero General Public License v3.0",
         "url": "https://api.github.com/licenses/agpl-3.0"
       },
       "openIssuesCount": 2503,
+      "owner": {
+        "id": "MDQ6VXNlcjIwOTIwNDkw",
+        "is_bot": false,
+        "login": "AUTOMATIC1111",
+        "type": "User",
+        "url": "https://github.com/AUTOMATIC1111"
+      },
       "pushedAt": "2026-03-02T07:00:53Z",
       "stargazersCount": 164613,
       "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
     },
     {
       "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+      "forksCount": 46173,
       "fullName": "Snailclimb/JavaGuide",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://javaguide.cn",
       "isArchived": false,
+      "isFork": false,
+      "language": "JavaScript",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 59,
+      "owner": {
+        "id": "MDQ6VXNlcjI5ODgwMTQ1",
+        "is_bot": false,
+        "login": "Snailclimb",
+        "type": "User",
+        "url": "https://github.com/Snailclimb"
+      },
       "pushedAt": "2026-08-22T15:51:09Z",
       "stargazersCount": 157957,
       "url": "https://github.com/Snailclimb/JavaGuide"
     },
     {
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "forksCount": 24191,
       "fullName": "langgenius/dify",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://dify.ai",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 967,
+      "owner": {
+        "id": "O_kgDOB5RjPA",
+        "is_bot": false,
+        "login": "langgenius",
+        "type": "Organization",
+        "url": "https://github.com/langgenius"
+      },
       "pushedAt": "2026-08-23T00:02:45Z",
       "stargazersCount": 153229,
       "url": "https://github.com/langgenius/dify"
     },
     {
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "forksCount": 21820,
       "fullName": "open-webui/open-webui",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://openwebui.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 327,
+      "owner": {
+        "id": "O_kgDOCWz90A",
+        "is_bot": false,
+        "login": "open-webui",
+        "type": "Organization",
+        "url": "https://github.com/open-webui"
+      },
       "pushedAt": "2026-08-22T13:13:14Z",
-      "stargazersCount": 149604,
+      "stargazersCount": 149603,
       "url": "https://github.com/open-webui/open-webui"
     },
     {
       "description": "The agent engineering platform.",
+      "forksCount": 24129,
       "fullName": "langchain-ai/langchain",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://docs.langchain.com/langchain/",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 418,
+      "owner": {
+        "id": "O_kgDOB43M6Q",
+        "is_bot": false,
+        "login": "langchain-ai",
+        "type": "Organization",
+        "url": "https://github.com/langchain-ai"
+      },
       "pushedAt": "2026-08-22T08:45:46Z",
-      "stargazersCount": 144794,
+      "stargazersCount": 144798,
       "url": "https://github.com/langchain-ai/langchain"
+    },
+    {
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+      "forksCount": 34842,
+      "fullName": "x1xhlol/system-prompts-and-models-of-ai-tools",
+      "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "",
+      "isArchived": false,
+      "isFork": false,
+      "language": "",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0"
+      },
+      "openIssuesCount": 161,
+      "owner": {
+        "id": "U_kgDOCxEerA",
+        "is_bot": false,
+        "login": "x1xhlol",
+        "type": "User",
+        "url": "https://github.com/x1xhlol"
+      },
+      "pushedAt": "2026-08-11T13:01:09Z",
+      "stargazersCount": 143016,
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"
+    },
+    {
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+      "forksCount": 11751,
+      "fullName": "github/spec-kit",
+      "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://github.github.com/spec-kit/",
+      "isArchived": false,
+      "isFork": false,
+      "language": "Python",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit"
+      },
+      "openIssuesCount": 349,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjk5MTk=",
+        "is_bot": false,
+        "login": "github",
+        "type": "Organization",
+        "url": "https://github.com/github"
+      },
+      "pushedAt": "2026-08-21T21:29:37Z",
+      "stargazersCount": 130842,
+      "url": "https://github.com/github/spec-kit"
     }
   ],
   "self-hosted": [
     {
       "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+      "forksCount": 14763,
       "fullName": "awesome-selfhosted/awesome-selfhosted",
       "hasIssues": false,
+      "hasWiki": false,
+      "homepage": "https://awesome-selfhosted.net/",
       "isArchived": false,
+      "isFork": false,
+      "language": "",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 0,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjI0MjcwNDE1",
+        "is_bot": false,
+        "login": "awesome-selfhosted",
+        "type": "Organization",
+        "url": "https://github.com/awesome-selfhosted"
+      },
       "pushedAt": "2026-08-22T18:55:56Z",
-      "stargazersCount": 314374,
+      "stargazersCount": 314378,
       "url": "https://github.com/awesome-selfhosted/awesome-selfhosted"
     },
     {
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "forksCount": 60306,
       "fullName": "n8n-io/n8n",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://n8n.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 1069,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjQ1NDg3NzEx",
+        "is_bot": false,
+        "login": "n8n-io",
+        "type": "Organization",
+        "url": "https://github.com/n8n-io"
+      },
       "pushedAt": "2026-08-22T21:44:14Z",
-      "stargazersCount": 201842,
+      "stargazersCount": 201854,
       "url": "https://github.com/n8n-io/n8n"
     },
     {
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "forksCount": 21820,
       "fullName": "open-webui/open-webui",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://openwebui.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 327,
+      "owner": {
+        "id": "O_kgDOCWz90A",
+        "is_bot": false,
+        "login": "open-webui",
+        "type": "Organization",
+        "url": "https://github.com/open-webui"
+      },
       "pushedAt": "2026-08-22T13:13:14Z",
-      "stargazersCount": 149604,
+      "stargazersCount": 149603,
       "url": "https://github.com/open-webui/open-webui"
     },
     {
       "description": "High performance self-hosted photo and video management solution.",
+      "forksCount": 6677,
       "fullName": "immich-app/immich",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://immich.app",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "agpl-3.0",
         "name": "GNU Affero General Public License v3.0",
         "url": "https://api.github.com/licenses/agpl-3.0"
       },
       "openIssuesCount": 711,
+      "owner": {
+        "id": "O_kgDOBoqYlg",
+        "is_bot": false,
+        "login": "immich-app",
+        "type": "Organization",
+        "url": "https://github.com/immich-app"
+      },
       "pushedAt": "2026-08-23T00:28:37Z",
-      "stargazersCount": 112376,
+      "stargazersCount": 112377,
       "url": "https://github.com/immich-app/immich"
     },
     {
       "description": "A fancy self-hosted monitoring tool",
+      "forksCount": 8273,
       "fullName": "louislam/uptime-kuma",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://uptime.kuma.pet",
       "isArchived": false,
+      "isFork": false,
+      "language": "JavaScript",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 787,
+      "owner": {
+        "id": "MDQ6VXNlcjEzMzY3Nzg=",
+        "is_bot": false,
+        "login": "louislam",
+        "type": "User",
+        "url": "https://github.com/louislam"
+      },
       "pushedAt": "2026-08-23T00:04:59Z",
       "stargazersCount": 90482,
       "url": "https://github.com/louislam/uptime-kuma"
     },
     {
       "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
+      "forksCount": 8154,
       "fullName": "Stirling-Tools/Stirling-PDF",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://stirling.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Java",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 570,
+      "owner": {
+        "id": "O_kgDOCFUNTw",
+        "is_bot": false,
+        "login": "Stirling-Tools",
+        "type": "Organization",
+        "url": "https://github.com/Stirling-Tools"
+      },
       "pushedAt": "2026-08-23T01:38:46Z",
-      "stargazersCount": 90057,
+      "stargazersCount": 90063,
       "url": "https://github.com/Stirling-Tools/Stirling-PDF"
     },
     {
       "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+      "forksCount": 6734,
       "fullName": "unslothai/unsloth",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://unsloth.ai/docs",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
-      "openIssuesCount": 1403,
-      "pushedAt": "2026-08-23T02:09:35Z",
-      "stargazersCount": 74408,
+      "openIssuesCount": 1402,
+      "owner": {
+        "id": "O_kgDOCP7bcQ",
+        "is_bot": false,
+        "login": "unslothai",
+        "type": "Organization",
+        "url": "https://github.com/unslothai"
+      },
+      "pushedAt": "2026-08-23T02:42:32Z",
+      "stargazersCount": 74411,
       "url": "https://github.com/unslothai/unsloth"
     },
     {
       "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
+      "forksCount": 4683,
       "fullName": "usememos/memos",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://usememos.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Go",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 45,
+      "owner": {
+        "id": "O_kgDOBbU-tw",
+        "is_bot": false,
+        "login": "usememos",
+        "type": "Organization",
+        "url": "https://github.com/usememos"
+      },
       "pushedAt": "2026-08-22T06:16:16Z",
       "stargazersCount": 62451,
       "url": "https://github.com/usememos/memos"
     },
     {
       "description": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 280+ one-click services on your own servers.",
+      "forksCount": 5330,
       "fullName": "coollabsio/coolify",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://coolify.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "PHP",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 656,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjYwNzE1MDQ0",
+        "is_bot": false,
+        "login": "coollabsio",
+        "type": "Organization",
+        "url": "https://github.com/coollabsio"
+      },
       "pushedAt": "2026-08-22T15:26:10Z",
-      "stargazersCount": 60888,
+      "stargazersCount": 60889,
       "url": "https://github.com/coollabsio/coolify"
     },
     {
       "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD",
+      "forksCount": 7027,
       "fullName": "go-gitea/gitea",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://gitea.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Go",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 2531,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjEyNzI0MzU2",
+        "is_bot": false,
+        "login": "go-gitea",
+        "type": "Organization",
+        "url": "https://github.com/go-gitea"
+      },
       "pushedAt": "2026-08-23T00:24:39Z",
       "stargazersCount": 57546,
       "url": "https://github.com/go-gitea/gitea"
     },
     {
       "description": "Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime and more",
+      "forksCount": 5663,
       "fullName": "appwrite/appwrite",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://appwrite.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "bsd-3-clause",
         "name": "BSD 3-Clause \"New\" or \"Revised\" License",
         "url": "https://api.github.com/licenses/bsd-3-clause"
       },
       "openIssuesCount": 1007,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjI1MDAzNjY5",
+        "is_bot": false,
+        "login": "appwrite",
+        "type": "Organization",
+        "url": "https://github.com/appwrite"
+      },
       "pushedAt": "2026-08-22T03:38:59Z",
       "stargazersCount": 57095,
       "url": "https://github.com/appwrite/appwrite"
     },
     {
       "description": "ClickHouse® is a real-time analytics database management system",
+      "forksCount": 8846,
       "fullName": "ClickHouse/ClickHouse",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://clickhouse.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "C++",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
-      "openIssuesCount": 7012,
-      "pushedAt": "2026-08-23T02:15:25Z",
+      "openIssuesCount": 7015,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjU0ODAxMjQy",
+        "is_bot": false,
+        "login": "ClickHouse",
+        "type": "Organization",
+        "url": "https://github.com/ClickHouse"
+      },
+      "pushedAt": "2026-08-23T02:32:55Z",
       "stargazersCount": 49395,
       "url": "https://github.com/ClickHouse/ClickHouse"
+    },
+    {
+      "description": "The painless way to host your own Git service",
+      "forksCount": 5074,
+      "fullName": "gogs/gogs",
+      "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://gogs.io",
+      "isArchived": false,
+      "isFork": false,
+      "language": "Go",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit"
+      },
+      "openIssuesCount": 1008,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjY2NTY2ODY=",
+        "is_bot": false,
+        "login": "gogs",
+        "type": "Organization",
+        "url": "https://github.com/gogs"
+      },
+      "pushedAt": "2026-08-22T21:32:23Z",
+      "stargazersCount": 47758,
+      "url": "https://github.com/gogs/gogs"
+    },
+    {
+      "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+      "forksCount": 8347,
+      "fullName": "HKUDS/nanobot",
+      "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://nanobot.wiki",
+      "isArchived": false,
+      "isFork": false,
+      "language": "Python",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit"
+      },
+      "openIssuesCount": 722,
+      "owner": {
+        "id": "O_kgDOBwsPCg",
+        "is_bot": false,
+        "login": "HKUDS",
+        "type": "Organization",
+        "url": "https://github.com/HKUDS"
+      },
+      "pushedAt": "2026-08-22T20:42:52Z",
+      "stargazersCount": 47287,
+      "url": "https://github.com/HKUDS/nanobot"
     }
   ],
   "database": [
     {
       "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "forksCount": 13623,
       "fullName": "supabase/supabase",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://supabase.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 1044,
-      "pushedAt": "2026-08-23T02:08:59Z",
-      "stargazersCount": 108286,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjU0NDY5Nzk2",
+        "is_bot": false,
+        "login": "supabase",
+        "type": "Organization",
+        "url": "https://github.com/supabase"
+      },
+      "pushedAt": "2026-08-23T02:22:28Z",
+      "stargazersCount": 108287,
       "url": "https://github.com/supabase/supabase"
     },
     {
       "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+      "forksCount": 6595,
       "fullName": "netdata/netdata",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://www.netdata.cloud",
       "isArchived": false,
+      "isFork": false,
+      "language": "Go",
       "license": {
         "key": "gpl-3.0",
         "name": "GNU General Public License v3.0",
         "url": "https://api.github.com/licenses/gpl-3.0"
       },
       "openIssuesCount": 394,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjQzMzkwNzgx",
+        "is_bot": false,
+        "login": "netdata",
+        "type": "Organization",
+        "url": "https://github.com/netdata"
+      },
       "pushedAt": "2026-08-23T00:11:27Z",
       "stargazersCount": 80263,
       "url": "https://github.com/netdata/netdata"
     },
     {
       "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server, and document and vector query engine.",
+      "forksCount": 24759,
       "fullName": "redis/redis",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "http://redis.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "C",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 2905,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjE1Mjk5MjY=",
+        "is_bot": false,
+        "login": "redis",
+        "type": "Organization",
+        "url": "https://github.com/redis"
+      },
       "pushedAt": "2026-08-20T14:45:16Z",
-      "stargazersCount": 76077,
+      "stargazersCount": 76079,
       "url": "https://github.com/redis/redis"
     },
     {
       "description": "The 30 Days of Python programming challenge is a step-by-step guide to learn the Python programming language in 30 days. This challenge may take more than 100 days. Follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+      "forksCount": 13162,
       "fullName": "Asabeneh/30-Days-Of-Python",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "",
       "isArchived": false,
+      "isFork": false,
+      "language": "Python",
       "license": {
         "key": "",
         "name": "",
         "url": ""
       },
       "openIssuesCount": 196,
+      "owner": {
+        "id": "MDQ6VXNlcjkwMDgwNjM=",
+        "is_bot": false,
+        "login": "Asabeneh",
+        "type": "User",
+        "url": "https://github.com/Asabeneh"
+      },
       "pushedAt": "2026-08-20T19:58:48Z",
-      "stargazersCount": 71639,
+      "stargazersCount": 71643,
       "url": "https://github.com/Asabeneh/30-Days-Of-Python"
     },
     {
       "description": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
+      "forksCount": 2677,
       "fullName": "meilisearch/meilisearch",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://www.meilisearch.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Rust",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 311,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjQzMjUwODQ3",
+        "is_bot": false,
+        "login": "meilisearch",
+        "type": "Organization",
+        "url": "https://github.com/meilisearch"
+      },
       "pushedAt": "2026-08-14T09:38:01Z",
       "stargazersCount": 59056,
       "url": "https://github.com/meilisearch/meilisearch"
     },
     {
       "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "forksCount": 10465,
       "fullName": "etcd-io/etcd",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://etcd.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "Go",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 322,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjQxOTcyNzky",
+        "is_bot": false,
+        "login": "etcd-io",
+        "type": "Organization",
+        "url": "https://github.com/etcd-io"
+      },
       "pushedAt": "2026-08-20T17:37:09Z",
       "stargazersCount": 52155,
       "url": "https://github.com/etcd-io/etcd"
     },
     {
       "description": "Free universal database tool and SQL client",
+      "forksCount": 4347,
       "fullName": "dbeaver/dbeaver",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://dbeaver.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "Java",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 3341,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjM0NzQzODY0",
+        "is_bot": false,
+        "login": "dbeaver",
+        "type": "Organization",
+        "url": "https://github.com/dbeaver"
+      },
       "pushedAt": "2026-08-22T18:03:41Z",
       "stargazersCount": 51508,
       "url": "https://github.com/dbeaver/dbeaver"
     },
     {
       "description": "ClickHouse® is a real-time analytics database management system",
+      "forksCount": 8846,
       "fullName": "ClickHouse/ClickHouse",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://clickhouse.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "C++",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
-      "openIssuesCount": 7012,
-      "pushedAt": "2026-08-23T02:15:25Z",
+      "openIssuesCount": 7015,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjU0ODAxMjQy",
+        "is_bot": false,
+        "login": "ClickHouse",
+        "type": "Organization",
+        "url": "https://github.com/ClickHouse"
+      },
+      "pushedAt": "2026-08-23T02:32:55Z",
       "stargazersCount": 49395,
       "url": "https://github.com/ClickHouse/ClickHouse"
     },
     {
       "description": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
+      "forksCount": 6765,
       "fullName": "metabase/metabase",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://metabase.com",
       "isArchived": false,
+      "isFork": false,
+      "language": "Clojure",
       "license": {
         "key": "other",
         "name": "Other",
         "url": ""
       },
       "openIssuesCount": 4394,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjEwNTIwNjI5",
+        "is_bot": false,
+        "login": "metabase",
+        "type": "Organization",
+        "url": "https://github.com/metabase"
+      },
       "pushedAt": "2026-08-23T01:43:09Z",
       "stargazersCount": 48882,
       "url": "https://github.com/metabase/metabase"
     },
     {
       "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+      "forksCount": 2530,
       "fullName": "prisma/prisma",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://www.prisma.io",
       "isArchived": false,
+      "isFork": false,
+      "language": "TypeScript",
       "license": {
         "key": "apache-2.0",
         "name": "Apache License 2.0",
         "url": "https://api.github.com/licenses/apache-2.0"
       },
       "openIssuesCount": 2552,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjE3MjE5Mjg4",
+        "is_bot": false,
+        "login": "prisma",
+        "type": "Organization",
+        "url": "https://github.com/prisma"
+      },
       "pushedAt": "2026-08-23T01:27:13Z",
       "stargazersCount": 47556,
       "url": "https://github.com/prisma/prisma"
     },
     {
       "description": "👩‍💻👨‍💻 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.",
+      "forksCount": 6697,
       "fullName": "LeCoupa/awesome-cheatsheets",
       "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://lecoupa.github.io/awesome-cheatsheets/",
       "isArchived": false,
+      "isFork": false,
+      "language": "JavaScript",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
       "openIssuesCount": 137,
+      "owner": {
+        "id": "MDQ6VXNlcjE2NTg2NDQ=",
+        "is_bot": false,
+        "login": "LeCoupa",
+        "type": "User",
+        "url": "https://github.com/LeCoupa"
+      },
       "pushedAt": "2026-04-12T17:26:10Z",
       "stargazersCount": 46388,
       "url": "https://github.com/LeCoupa/awesome-cheatsheets"
     },
     {
       "description": "DuckDB is an analytical in-process SQL database management system",
+      "forksCount": 3597,
       "fullName": "duckdb/duckdb",
       "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "http://www.duckdb.org",
       "isArchived": false,
+      "isFork": false,
+      "language": "C++",
       "license": {
         "key": "mit",
         "name": "MIT License",
         "url": "https://api.github.com/licenses/mit"
       },
-      "openIssuesCount": 811,
+      "openIssuesCount": 812,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjgyMDM5NTU2",
+        "is_bot": false,
+        "login": "duckdb",
+        "type": "Organization",
+        "url": "https://github.com/duckdb"
+      },
       "pushedAt": "2026-08-22T15:02:13Z",
       "stargazersCount": 40536,
       "url": "https://github.com/duckdb/duckdb"
+    },
+    {
+      "description": "TiDB is built for agentic workloads that grow unpredictably, with ACID guarantees and native support for transactions, analytics, and vector search. No data silos. No noisy neighbors. No infrastructure ceiling.",
+      "forksCount": 6231,
+      "fullName": "pingcap/tidb",
+      "hasIssues": true,
+      "hasWiki": true,
+      "homepage": "https://www.tidb.io/",
+      "isArchived": false,
+      "isFork": false,
+      "language": "Go",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "url": "https://api.github.com/licenses/apache-2.0"
+      },
+      "openIssuesCount": 6834,
+      "owner": {
+        "id": "MDEyOk9yZ2FuaXphdGlvbjExODU1MzQz",
+        "is_bot": false,
+        "login": "pingcap",
+        "type": "Organization",
+        "url": "https://github.com/pingcap"
+      },
+      "pushedAt": "2026-08-23T02:11:32Z",
+      "stargazersCount": 40461,
+      "url": "https://github.com/pingcap/tidb"
+    },
+    {
+      "description": "Opiniated RAG for integrating GenAI in your apps 🧠   Focus on your product rather than the RAG. Easy integration in existing products with customisation!  Any LLM: GPT4, Groq, Llama. Any Vectorstore: PGVector, Faiss. Any Files. Anyway you want.",
+      "forksCount": 3725,
+      "fullName": "QuivrHQ/quivr",
+      "hasIssues": true,
+      "hasWiki": false,
+      "homepage": "https://core.quivr.com",
+      "isArchived": false,
+      "isFork": false,
+      "language": "Python",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "url": ""
+      },
+      "openIssuesCount": 32,
+      "owner": {
+        "id": "O_kgDOCX8v8g",
+        "is_bot": false,
+        "login": "QuivrHQ",
+        "type": "Organization",
+        "url": "https://github.com/QuivrHQ"
+      },
+      "pushedAt": "2025-07-09T12:55:23Z",
+      "stargazersCount": 39415,
+      "url": "https://github.com/QuivrHQ/quivr"
     }
   ]
 }

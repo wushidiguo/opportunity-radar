@@ -5,14 +5,14 @@
 > 🌐 **在线地址：** [https://wushidiguo.github.io/opportunity-radar/](https://wushidiguo.github.io/opportunity-radar/)
 >（由 GitHub Actions 每日自动更新数据快照并发布）
 
-## 已实现（v0.3.0）
+## 已实现（v0.4.0）
 
-- **Web App**（`web/`）：纯静态、无构建步骤的机会卡片浏览器 — 按 topic 切换、搜索、排序、最低分过滤、保存机会（localStorage）、可解释的机会分因子
-- **评分引擎**（`src/score.mjs`）：纯函数、确定性、可解释的 Opportunity Score（0~100，含 8 个因子明细）
+- **Web App**（`web/`）：纯静态、无构建步骤的机会卡片浏览器 — 按 topic 切换、搜索、排序、最低分过滤、保存机会（localStorage）、显示"已商业化/商业化空白"标签与机会分因子
+- **评分引擎 v2**（`src/score.mjs`）：不只奖励热度，而是衡量"商业化空白"——明显已公司化/托管化的项目（如 Supabase、ComfyUI、n8n、Hermes）会被自动标记"已商业化"并压低分数；强需求且无现成商业化产品的项目排名靠前
 - **数据获取**（`src/fetch.mjs`）：`gh search repos` 实时数据；`--demo` 模式读本地 fixture 离线可用
 - **CLI**（`bin/opportunity-radar.mjs`）：table / json / csv 三种输出，支持 `--min-score` 过滤、`--out` 写文件
 - **数据管线**（`scripts/build-snapshot.mjs`）：拉取实时 GitHub 数据生成 Web 数据快照
-- **测试**（`test/`）：31 个单元 + 集成 + 渲染测试（`node --test`）
+- **测试**（`test/`）：37 个单元 + 集成 + 渲染测试（`node --test`）
 - **CI/CD**（`.github/workflows/`）：CI 测试 + 每日数据快照 + GitHub Pages 自动发布
 
 ## 快速开始
@@ -28,8 +28,8 @@ node bin/opportunity-radar.mjs ai 10 --demo
 # 实时数据（需要 gh 已登录）
 node bin/opportunity-radar.mjs ai 10
 
-# 重建 Web 数据快照（可指定 topic 与数量）
-node scripts/build-snapshot.mjs --topics ai,self-hosted,database,devops --limit 25
+# 重建 Web 数据快照（拉较大候选池、按"机会分"排名、默认排除清单/教程类）
+node scripts/build-snapshot.mjs --topics ai,self-hosted,database,devops,llm --pool 100 --top 30
 
 # 运行测试
 npm test
@@ -39,16 +39,15 @@ npm test
 
 | 因子 | 满分 | 说明 |
 |---|---|---|
-| popularity | 30 | log10(stars) × 10 |
-| demand | 20 | open_issues / 50 |
-| activity | 15 | 180 天内 push 15 分；365 天内 5 分 |
-| notArchived | 10 | 未归档 |
-| issueTracker | 10 | 有 issue tracker |
-| license | 5 | 有 license（排除 other） |
-| description | 5 | 有描述 |
-| issueRatio | 5 | issue/star ≥ 0.02 |
+| popularity | 20 | log10(stars+1) × 5（sublinear，避免大项目霸榜） |
+| demand | 15 | open_issues / 150 |
+| activity | 10 | 180 天内 push 10 分；365 天内 4 分 |
+| health | 15 | 未归档 + 有 issue + 有描述 + 有 wiki |
+| **gap** | **40（可负）** | **商业化空白（核心）**：有官网/托管/云产品则扣分，越"空白"越高分 |
 
-等级：A 强机会 ≥65 ｜ B 中机会 ≥45 ｜ C 弱机会 ≥25 ｜ D 低信号 <25
+**gap 信号**：有产品官网（非 GitHub）、描述含 cloud/saas/enterprise/managed 等关键词 → 判"已商业化"并扣分；无官网、自托管 topic、宽松许可证 → 加分。Stars 极大（>12 万）会被"已商业化"重罚。
+
+等级：A 强机会 ≥75 ｜ B 中机会 ≥60 ｜ C 弱机会 ≥45 ｜ D 低信号 <45
 
 ## 项目结构
 
